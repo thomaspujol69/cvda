@@ -19,5 +19,6 @@ On utilise assertEquals
 On met en entête de la fonction de test `@Test(expected=IllegalArgumentException.class)` signifiant que ce test doit renvoyer une erreur de type IllegalArgumentException. 
 NB : J'aurais également pu utiliser la syntaxe try{}catch{}.
 
-
+## Exercice 5 - Question 1 : 
+Utilisation de Normalizer : https://docs.oracle.com/javase/8/docs/api/java/text/Normalizer.html
 

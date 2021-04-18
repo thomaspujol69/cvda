@@ -2,6 +2,7 @@ package lyon1.iutinfo.cvda.cvda.tp2.t.pujol;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.text.Normalizer;
 
 public class Personne {
     private String nom; 
@@ -15,6 +16,19 @@ public class Personne {
         this.Prénom="";
     }
 
+    public String getLogin() {
+        String n= "";
+        String p= "";
+        if (Prénom!=""){
+            p = Normalizer.normalize(Prénom.substring(0, 1), Normalizer.Form.NFD);
+            p = p.replaceAll("[^\\p{ASCII}]", "");
+        } 
+        if (nom!=""){
+            n = Normalizer.normalize(nom, Normalizer.Form.NFD);
+            n = n.replaceAll("[^\\p{ASCII}]", "");
+        } 
+        return p+n;
+    }
     public String getNom() {
         return nom;
     }

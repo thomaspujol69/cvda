@@ -224,7 +224,8 @@ public class PersonneTest {
         GregorianCalendar expResult=new GregorianCalendar(y, m, d);
         Personne instance = new Personne();
         instance.setDdn(y, m, d);
-        assertEquals(expResult, instance.getNom());
+        
+        assertEquals(expResult, instance.getDdn());
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -257,6 +258,22 @@ public class PersonneTest {
         //assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getLogin method, of class Personne.
+     */
+    @Test
+    public void testGetLogin() {
+        System.out.println("getLogin");
+        Personne instance = new Personne();
+        instance.setNom("*Étienne");
+        instance.setPrénom("Étienne");
+        String expResult = "EETIENNE";
+        String result = instance.getLogin();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
 
     /**
