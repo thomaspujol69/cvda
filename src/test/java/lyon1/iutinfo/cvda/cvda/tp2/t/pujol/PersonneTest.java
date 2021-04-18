@@ -275,6 +275,18 @@ public class PersonneTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+    
+    /**
+     * Test of getLogin method, of class Personne.
+     */
+    @Test(expected=IllegalStateException.class)
+    public void testGetLoginEmpty() {
+        System.out.println("getLogin");
+        Personne instance = new Personne();
+        instance.getLogin();
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
 
     /**
      * Test of setЛюбимыйцвет method, of class Personne.

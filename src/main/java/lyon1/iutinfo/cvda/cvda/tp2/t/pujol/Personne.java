@@ -16,17 +16,20 @@ public class Personne {
         this.Prénom="";
     }
 
-    public String getLogin() {
+    public String getLogin() throws IllegalStateException {
         String n= "";
         String p= "";
-        if (Prénom!=""){
+        if (!"".equals(Prénom)){
             p = Normalizer.normalize(Prénom.substring(0, 1), Normalizer.Form.NFD);
             p = p.replaceAll("[^\\p{ASCII}]", "");
         } 
-        if (nom!=""){
+        if (!"".equals(nom)){
             n = Normalizer.normalize(nom, Normalizer.Form.NFD);
             n = n.replaceAll("[^\\p{ASCII}]", "");
-        } 
+        }
+        if("".equals(p+n)){
+            throw new IllegalStateException();
+        }
         return p+n;
     }
     public String getNom() {

@@ -22,3 +22,7 @@ NB : J'aurais également pu utiliser la syntaxe try{}catch{}.
 ## Exercice 5 - Question 1 : 
 Utilisation de Normalizer : https://docs.oracle.com/javase/8/docs/api/java/text/Normalizer.html
 
+## Exercice 5 - Question 2 : 
+Utilisation de l'exception IllegalStateException car l'état de l'instance de Personne au moment de l'arrivée de l'exception ne permet pas de donner un login.
+
+
