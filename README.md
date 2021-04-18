@@ -13,7 +13,7 @@ https://g4s22021.bavori.tech/?controller=SwimlaneController&action=index&project
 Nom de la classe créée : PersonneTest
 
 ## Exercice 4 - Question 7 :
-On utilise assertEquals
+On utilise assertEquals().
 
 ## Exercice 4 - Question 9 :
 On met en entête de la fonction de test `@Test(expected=IllegalArgumentException.class)` signifiant que ce test doit renvoyer une erreur de type IllegalArgumentException. 
@@ -25,4 +25,6 @@ Utilisation de Normalizer : https://docs.oracle.com/javase/8/docs/api/java/text/
 ## Exercice 5 - Question 2 : 
 Utilisation de l'exception IllegalStateException car l'état de l'instance de Personne au moment de l'arrivée de l'exception ne permet pas de donner un login.
 
+## Exercice 5 - Question 3 : 
+Utilisation de la liste de TLD http://data.iana.org/TLD/tlds-alpha-by-domain.txt pour la vérification des domaines de premier niveau.
 
