@@ -35,5 +35,5 @@ Modifications apportées pour rendre le code plus propre :
 - Uniformisation du positionnement des opérateurs et balises 
 
 ## Exercice 7 - Question 2 :
-Format de la Javadoc : HTML 
+Format de la Javadoc : HTML  
 Répertoire contenant la Javadoc : cvda-tp2-t.pujol\target\site\apidocs
