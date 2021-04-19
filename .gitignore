@@ -1,8 +1,8 @@
-/target/
-/nbproject/classes/
-/nbproject/generated-sources/
-/nbproject/javadoc-bundle-options/
-/nbproject/maven-archiver/
-/nbproject/surefire/
-/nbproject/surefire-reports/
-/nbproject/maven-javadoc-plugin-stale-data.txt
+/target/maven-javadoc-plugin-stale-data.txt
+/target/surefire-reports/
+/target/surefire/
+/target/maven-archiver/
+/target/javadoc-bundle-options/
+/target/generated-sources/
+/target/classes/
+/nbproject/
