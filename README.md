@@ -16,7 +16,7 @@ Nom de la classe créée : PersonneTest
 On utilise assertEquals().
 
 ## Exercice 4 - Question 9 :
-On met en entête de la fonction de test `@Test(expected=IllegalArgumentException.class)` signifiant que ce test doit renvoyer une erreur de type IllegalArgumentException. 
+On met en entête de la méthode de test `@Test(expected=IllegalArgumentException.class)` signifiant que ce test doit renvoyer une erreur de type IllegalArgumentException. 
 NB : J'aurais également pu utiliser la syntaxe try{}catch{}.
 
 ## Exercice 5 - Question 1 : 
@@ -28,3 +28,12 @@ Utilisation de l'exception IllegalStateException car l'état de l'instance de Pe
 ## Exercice 5 - Question 3 : 
 Utilisation de la liste de TLD http://data.iana.org/TLD/tlds-alpha-by-domain.txt pour la vérification des domaines de premier niveau.
 
+## Exercice 6 - Question 1 :
+Modifications apportées pour rendre le code plus propre : 
+- Tabulation du code
+- Renommage des variables, propriétés, méthodes et classes en anglais et en camelCase
+- Uniformisation du positionnement des opérateurs et balises 
+
+## Exercice 7 - Question 2 :
+Format de la Javadoc : HTML 
+Répertoire contenant la Javadoc : cvda-tp2-t.pujol\target\site\apidocs
