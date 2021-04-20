@@ -193,29 +193,29 @@ public class Person {
 
     /**
      * Method allowing to put in PascalCase the character string in parameter, having for locator characters the dashes and the spaces. 
-     * @param str the input string
+     * @param strToTransform the input string
      * @return the PascalCased string
      */
-    protected String toPascalCase(String str) {
+    protected String toPascalCase(String strToTransform) {
         String[] separators = {" ", "-"};
-        if (!str.equals("")) {
+        if (!strToTransform.equals("")) {
             int i;
             String[] pList;
             for (String sepa : separators) {
-                pList = str.split(sepa);
-                str = "";
+                pList = strToTransform.split(sepa);
+                strToTransform = "";
                 i = 0;
                 for (String s : pList) {
                     if (i != 0) {
-                        str = str + sepa;
+                        strToTransform = strToTransform + sepa;
                     }
                     if (!s.equals("")) {
-                        str = str + s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
+                        strToTransform = strToTransform + s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
                     }
                     i++;
                 }
             }
         }
-        return str;
+        return strToTransform;
     }
 }
