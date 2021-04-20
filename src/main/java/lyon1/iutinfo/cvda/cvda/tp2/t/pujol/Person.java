@@ -37,7 +37,7 @@ public class Person {
     /**
      * Method returning the person's login
      * @return the person login if it isn't empty
-     * @throws IllegalStateException
+     * @throws IllegalStateException if the login is empty
      */
     public String getLogin() throws IllegalStateException {
         String n = "";
@@ -99,7 +99,7 @@ public class Person {
     /**
      * Method verifying and defining the person's email
      * @param em the person's email
-     * @throws IllegalArgumentException
+     * @throws IllegalArgumentException if the string in argument is not a valid email address
      */
     public void setEmail(String em) throws IllegalArgumentException {
         // List of TLDs taken here : http://data.iana.org/TLD/tlds-alpha-by-domain.txt 
@@ -107,7 +107,7 @@ public class Person {
         ArrayList<String> emailParts = new ArrayList<>(Arrays.asList(em.split("\\.")));
         String emailTLD = emailParts.get(emailParts.size() - 1).toUpperCase();
         String emailRest = em.substring(0, em.length() - emailTLD.length() - 1);
-        if ((!tldList.contains(emailTLD)) || "".equals(emailRest) || em.chars().filter(ch -> ch == '@').count() != 1 || em.matches(".*[:;=+\"\\_].*")) {
+        if (!tldList.contains(emailTLD) || "".equals(emailRest) || em.chars().filter(ch -> ch == '@').count() != 1 || em.matches(".*[:;=+\"\\_].*")) {
             throw new IllegalArgumentException();
         }
         this.email = em;
@@ -126,7 +126,7 @@ public class Person {
      * @param y the year of the date
      * @param m the month of the date
      * @param d the day of the date
-     * @throws IllegalArgumentException
+     * @throws IllegalArgumentException if the date provided is in the future
      */
     public void setBDate(int y, int m, int d) throws IllegalArgumentException {
         if (m <= 12 && d <= 31) {
@@ -143,7 +143,7 @@ public class Person {
 
     /**
      * Method returning the person's favorite color
-     * @return
+     * @return the person's favorite color
      */
     public String getFavColor() {
         return favColor;
@@ -170,13 +170,13 @@ public class Person {
         int len = str.length();
         int st = 0;
         char[] val = str.toCharArray();
-        while ((st < len) && (val[st] <= '-')) {
+        while (st < len && val[st] <= '-') {
             st++;
         }
-        while ((st < len) && (val[len - 1] <= '-')) {
+        while (st < len && val[len - 1] <= '-') {
             len--;
         }
-        return ((st > 0) || (len < str.length())) ? str.substring(st, len) : str;
+        return st > 0 || len < str.length() ? str.substring(st, len) : str;
     }
 
     /**
@@ -197,11 +197,11 @@ public class Person {
      * @return the PascalCased string
      */
     protected String toPascalCase(String str) {
-        String[] séparateurs = {" ", "-"};
+        String[] separators = {" ", "-"};
         if (!str.equals("")) {
             int i;
             String[] pList;
-            for (String sepa : séparateurs) {
+            for (String sepa : separators) {
                 pList = str.split(sepa);
                 str = "";
                 i = 0;

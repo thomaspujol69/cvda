@@ -173,11 +173,11 @@ public class PersonneTest {
      */
     @Test
     public void testSetFirstName() {
-        System.out.println("setPr\u00e9lastName");
-        String prélastName = "jeAn-REné ";
+        System.out.println("setFirstName");
+        String firstName = "jeAn-REné ";
         String expResult="Jean-René";
         Person instance = new Person();
-        instance.setFirstName(prélastName); 
+        instance.setFirstName(firstName); 
         assertEquals(expResult, instance.getFirstName());
     }
 
@@ -186,11 +186,11 @@ public class PersonneTest {
      */
     @Test
     public void testSetFirstNameVide() {
-        System.out.println("setPr\u00e9lastNameVide");
-        String prélastName = "";
+        System.out.println("setFirstNameVide");
+        String firstName = "";
         String expResult="";
         Person instance = new Person();
-        instance.setFirstName(prélastName); 
+        instance.setFirstName(firstName); 
         assertEquals(expResult, instance.getFirstName());
     }
 
@@ -228,8 +228,8 @@ public class PersonneTest {
      * Test of setBDate method, of class Person.
      */
     @Test(expected=IllegalArgumentException.class)
-    public void testSetBDateFutur() {
-        System.out.println("setBDate");
+    public void testSetBDateFuture() {
+        System.out.println("setBDateFuture");
         int y = 2023;
         int m = 01;
         int d = 01;
